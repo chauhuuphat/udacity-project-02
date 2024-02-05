@@ -1,0 +1,6 @@
+instance_1_ami           = "ami-0277155c3f0ab2930"
+instance_1_type          = "t2.micro"
+instance_1_name          = "Udacity T2"
+instance_2_ami           = "ami-0277155c3f0ab2930"
+instance_2_type          = "m4.large"
+instance_2_name          = "Udacity M4"

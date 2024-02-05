@@ -1,0 +1,27 @@
+Estimate summary;;;;;;;;;
+Upfront cost;Monthly cost;Total 12 months cost;Currency;;;;;;
+49482.06;19768.03;286698.42;USD;;;;;;
+;;* Includes upfront cost;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+Detailed Estimate;;;;;;;;;
+Group hierarchy;Region;Description;Service;Upfront;Monthly;First 12 months total;Currency;Status;Configuration summary
+Initial_cost_estimate;US East (N. Virginia);;Amazon EC2;11437.056;589.296;18508.61;USD;;Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 16), Advance EC2 instance (c6g.xlarge), Pricing strategy ( 3yr  Partial Upfront), Enable monitoring (enabled), EBS Storage amount (100 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Internet (200 GB per month), DT Intra-Region: (0 TB per month)
+Initial_cost_estimate;US East (N. Virginia);;Amazon Route 53;0;292.5;3510.00;USD;;Hosted Zones (1)
+Initial_cost_estimate;US East (N. Virginia);Cloud Front;Amazon CloudFront;0;107.52;1290.24;USD;;Data transfer out to internet (1 TB per month), Data transfer out to origin (1 TB per month)
+Initial_cost_estimate;US East (N. Virginia);;S3 Standard;0;164.92;1979.04;USD;;S3 Standard storage (7 TB per month), PUT, COPY, POST, LIST requests to S3 Standard (10000), GET, SELECT, and all other requests from S3 Standard (10000)
+Initial_cost_estimate;US East (N. Virginia);;Data Transfer;0;368.64;4423.68;USD;;DT Inbound: Not selected (0 TB per month), DT Outbound: Internet (4 TB per month)
+Initial_cost_estimate;US East (N. Virginia);VPC;Network Address Translation (NAT) Gateway;0;203.4;2440.80;USD;;Number of NAT Gateways (4)
+Initial_cost_estimate;US East (N. Virginia);VPC;Data Transfer;0;368.64;4423.68;USD;;DT Inbound: Not selected (0 TB per month), DT Outbound: Internet (4 TB per month), DT Intra-Region: (0 TB per month), Data transfer cost (368.64)
+Initial_cost_estimate;US East (N. Virginia);;Amazon RDS for PostgreSQL;38045;16915.19;241027.28;USD;;Storage volume (General Purpose SSD (gp2)), Storage amount (10 TB), Nodes (5), Instance Type (db.m5.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (Partial Upfront), Cost for one month of retention (per vCPU per month) (1.5000000000), Cost for total retention (per vCPU per month) (1.50), Additional backup storage (10 TB)
+Initial_cost_estimate;US East (N. Virginia);Load balancer;Application Load Balancer;0;227.51999999999998;2730.24;USD;;Number of Application Load Balancers (2)
+Initial_cost_estimate;US East (N. Virginia);;Amazon CloudWatch;0;530.4;6364.80;USD;;Number of Metrics (includes detailed and custom metrics) (500), Standard Logs: Data Ingested (100 GB), Logs Delivered to CloudWatch Logs: Data Ingested (100 GB), Logs Delivered to S3: Data Ingested (1 TB), Expected Logs Data scanned (500 GB), Number of Dashboards (10)
+"Explain:
+Increase EC2 from 8 to 12 to expand to 4 AZs, including Web and application instance.
+Increase S3 storage to 7TB because enable versioning to ensure no data loss.
+DB increase to 5 instance because 1 primary, 1 AZ deployment for HA, 3 read replicate to reduce read performance to primary
+Enable cloud watch to collecting log and send alert when facing performance issues.";;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+Acknowledgement;;;;;;;;;
+* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.;;;;;;;;;
